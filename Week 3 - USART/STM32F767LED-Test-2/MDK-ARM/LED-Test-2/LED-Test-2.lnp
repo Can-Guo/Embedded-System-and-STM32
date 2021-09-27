@@ -1,0 +1,27 @@
+--cpu Cortex-M7.fp.dp
+"led-test-2\startup_stm32f767xx.o"
+"led-test-2\main.o"
+"led-test-2\gpio.o"
+"led-test-2\stm32f7xx_it.o"
+"led-test-2\stm32f7xx_hal_msp.o"
+"led-test-2\stm32f7xx_hal_cortex.o"
+"led-test-2\stm32f7xx_hal_tim.o"
+"led-test-2\stm32f7xx_hal_tim_ex.o"
+"led-test-2\stm32f7xx_hal_rcc.o"
+"led-test-2\stm32f7xx_hal_rcc_ex.o"
+"led-test-2\stm32f7xx_hal_flash.o"
+"led-test-2\stm32f7xx_hal_flash_ex.o"
+"led-test-2\stm32f7xx_hal_gpio.o"
+"led-test-2\stm32f7xx_hal_dma.o"
+"led-test-2\stm32f7xx_hal_dma_ex.o"
+"led-test-2\stm32f7xx_hal_pwr.o"
+"led-test-2\stm32f7xx_hal_pwr_ex.o"
+"led-test-2\stm32f7xx_hal.o"
+"led-test-2\stm32f7xx_hal_i2c.o"
+"led-test-2\stm32f7xx_hal_i2c_ex.o"
+"led-test-2\stm32f7xx_hal_exti.o"
+"led-test-2\system_stm32f7xx.o"
+--library_type=microlib --strict --scatter "LED-Test-2\LED-Test-2.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LED-Test-2.map" -o LED-Test-2\LED-Test-2.axf
