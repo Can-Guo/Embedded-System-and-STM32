@@ -39,7 +39,8 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
-typedef unsigned char u8 ;
+//typedef unsigned char uint_8;
+ typedef uint8_t u8; 
 //#define u16 unsigned short int;  
 //#define u32 unsigned int;  
 
@@ -94,18 +95,24 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-	u8 word[10] = "uart_1_ready";
+	u8 word[] = "uart_1_ready \r\n";
+	
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	
   while (1)
   {
     /* USER CODE END WHILE */
+
 		HAL_UART_Transmit(&huart1,word,sizeof(word),100);
+		
+		
+		
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
-
+   
 /**
   * @brief System Clock Configuration
   * @retval None

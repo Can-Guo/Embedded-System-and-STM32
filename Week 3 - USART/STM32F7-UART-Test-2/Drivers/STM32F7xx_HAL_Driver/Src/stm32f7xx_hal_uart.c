@@ -1155,6 +1155,9 @@ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, u
 
     /* At end of Tx process, restore huart->gState to Ready */
     huart->gState = HAL_UART_STATE_READY;
+		HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_0);
+		
+		HAL_Delay(25);
 
     return HAL_OK;
   }
