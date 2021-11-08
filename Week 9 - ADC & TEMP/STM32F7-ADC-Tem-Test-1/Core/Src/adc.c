@@ -100,7 +100,7 @@ float Get_Temp(int times)
 	
 	// ADC值 -> 电压值 -> 温度
 	float Temp_voltage = Temp_adc * 3.3 / 4096; //ADC值转换为电压值
-  float Temperature = (Temp_voltage - 0.76)/0.0025 + 25;   //根据电压值与温度的关系，得到温度值
+ 	float Temperature = (Temp_voltage - 0.76)/0.0025 + 25;   //根据电压值与温度的关系，得到温度值
 	
 	//LED提示
 	HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_1);
